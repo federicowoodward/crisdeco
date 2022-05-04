@@ -1,0 +1,88 @@
+/*-------------------------------------------------------------------*/
+/* nav bar*/
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+.navBar {
+  background-color: #020301;
+  width: 100%;
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.navBarUl {
+  float: right;
+}
+
+.navBarUl li {
+  list-style: none;
+  margin: 20px 25px 0 0;
+  float: left;
+  position: relative;
+}
+
+.navBarUl li a {
+  text-decoration: none;
+  color: #F3F5F9;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+}
+
+.navBarUl li a::before {
+  display: block;
+  content: "";
+  width: 0%;
+  background: #F3F5F9;
+  height: 3px;
+  bottom: -15px;
+  position: absolute;
+  -webkit-transition: width 0.8;
+  transition: width 0.8;
+}
+
+.navBarUl li a:hover::before {
+  width: 100%;
+}
+
+.logo {
+  float: left;
+  position: relative;
+  padding: 15px;
+}
+
+.buscador {
+  float: right;
+  margin: 15px 20px 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+.buscador #search {
+  height: 30px;
+  background: #F3F5F9;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  border-radius: 5px;
+}
+
+.buscador input#search:hover, .buscador input#search:focus, .buscador input#search:active {
+  outline: none;
+  background: #2b303b;
+  -webkit-transition: background .55s ease;
+  transition: background .55s ease;
+}
+
+.buscador .icon {
+  position: absolute;
+  margin-left: 11px;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+.buscador .icon a {
+  color: #020301;
+}
+/*# sourceMappingURL=navBar.css.map */

@@ -1,0 +1,450 @@
+ @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+//  /*TODA LA PAGINA*/
+
+ footer {
+        background-image: url(../assets/fondoFooter2.jpg); 
+        opacity: 0.7;
+        padding-top: 1;
+        height: 150px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        bottom: 0;  
+ }
+     main footer div {
+         display: flex;
+         flex-direction: column;
+     }
+
+     footer h3 {
+         background-color: transparent;
+         
+     }
+     footer img {
+         width: 30px;
+     }
+
+ /*-------------------------------------------------------------------*/
+
+ /* nav bar*/
+
+
+.navBar {
+    background-color: #020301;
+    width: 100%;
+    clear: both;
+    content: "";
+    display: table;
+}
+.navBarUl {
+    float:  right;
+}
+.navBarUl li {
+    list-style: none;
+    margin: 20px 25px 0 0;
+    float: left;
+    position: relative;
+}
+.navBarUl li a {
+    text-decoration: none;
+    color: #F3F5F9;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+}
+.navBarUl li a::before {
+    display: block;
+    content: "";
+    width: 0%;
+    background: #F3F5F9;
+    height: 3px;
+    bottom: -15px;
+    position: absolute;
+    transition: width 0.8;
+}
+.navBarUl li a:hover::before {
+    width: 100%;
+}
+
+.logo {
+  float: left;
+  position: relative;
+  padding: 15px;
+}
+.buscador { 
+  float: right;
+  margin: 15px 20px 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+.buscador #search {
+  height: 30px;
+  background: #F3F5F9;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.buscador input#search:hover, .buscador input#search:focus, .buscador input#search:active{
+  outline:none;
+  background: #2b303b;
+
+  -webkit-transition: background .55s ease;
+  -moz-transition: background .55s ease;
+  -ms-transition: background .55s ease;
+  -o-transition: background .55s ease;
+  transition: background .55s ease;
+}
+.buscador .icon{
+  position: absolute;
+  margin-left: 11px;
+  margin-top: 5px;
+  z-index: 1;
+  a {color: #020301;}
+}
+
+
+
+/*body main*/
+body {
+    background: #FFDB15;
+    .btn a {
+      text-decoration: none;
+      color: white;
+    }
+}
+ 
+.ir-arriba {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}                  
+/* Diseño mobile first
+*/
+
+body {
+  main {
+    .container { 
+      padding-bottom: 80px;
+    }
+    .texto {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      margin: auto;
+      h1 {
+        text-align: center;
+        font-family: 'Comfortaa', cursive;
+        font-size: 2em;
+        color: #020301;
+      }
+    }
+    .imagen { 
+      display: none;
+      height: 30em;
+      margin-left: 2px ;
+      margin-right: 2px ;
+      background-image: url(../assets/imgindex/sillonprincipal.svg);
+      display: flex;
+      justify-self: center;
+      background-image: no-repeat;
+      background-image: fixed;
+      background-image: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .container2 p {
+      color: wheat;
+      font-size: 2em;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    @media screen and (max-width: 1024px ) {
+    .container2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 0.5em 0.5em;
+      grid-auto-flow: row;
+      align-content: center;
+      justify-items: center;
+      align-items: center;
+      grid-template-areas:
+        "foto1 texto1"
+        "foto2 texto2"
+        "foto3 texto3"
+        "foto4 texto4"
+        "foto5 texto5";
+    
+    .foto1 { grid-area: foto1; }
+    
+    .texto1 { grid-area: texto1; }
+    
+    .foto2 { grid-area: foto2; }
+    
+    .texto2 { grid-area: texto2; }
+    
+    .foto3 { grid-area: foto3; }
+    
+    .texto3 { grid-area: texto3; }
+    
+    .foto4 { grid-area: foto4; }
+    
+    .texto4 { grid-area: texto4; }
+    
+    .foto5 { grid-area: foto5; }
+    
+    .texto5 { grid-area: texto5; }
+    }
+}
+}
+}
+@media screen and (max-width: 768px) {
+  
+  .container2 {                                                                  /*Tengo q hacer q esto funcione solo con pantallas chicas*/
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px ) {
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "texto imagen";
+    
+  }
+
+  .imagen {
+  
+    grid-area: imagen;
+    width: 100%;
+  }
+  .imagen img {
+      width:35em;
+      height: 35.48em;
+  }
+  
+  
+/* segunda grid del index */
+.grid2 .container2 {
+  margin: auto;
+  width: 100%;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 17em);
+    grid-template-rows: repeat(3, 14em);
+    gap: 9px 9px;
+    grid-auto-flow: row;
+    
+    grid-template-areas:
+      "foto1 foto1 foto2 texto1"
+      "foto1 foto1 texto2 foto3"
+      "texto3 foto4 foto5 foto5";
+    width: 95%;
+  }
+  .box:hover {
+    transform: scale(1.03);
+  }  
+  .foto1 { grid-area: foto1; }
+  .foto2 { grid-area: foto2; }
+  .texto1 { grid-area: texto1; }
+  .texto2 { grid-area: texto2; }
+  .foto3 { grid-area: foto3; }
+  .texto3 { grid-area: texto3; }
+  .foto4 { grid-area: foto4; }
+  .foto5 { grid-area: foto5; }
+}
+
+  
+/*-----------------------------------------------------------------------*/
+
+
+
+
+
+
+/*estilos para servicios*/
+
+* {
+    text-align: left;
+  
+  }
+  .main h1 {
+    margin-top: 30px;
+    padding: 23px;
+  } 
+    .main h3 {
+      margin: 15px;
+    }
+      .main nav ul li {
+        margin: 3px;
+        padding: 5px;
+      }
+        .main nav ul li h3 {
+          text-decoration: underline;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+  
+  .mainService { 
+    padding: 2em;
+    padding-top: 0;
+    margin: 1em;
+    margin-bottom: 2.2em;
+    h1 {
+      text-align: center;
+      font-size: 2em;
+    }
+  }
+
+/*producutos*/
+
+.contenedor .productos ul li {
+    list-style: none;
+}
+body {
+  overflow-x: hidden;
+}
+.card { 
+  padding: 5px;
+  margin: 10px auto 10px;
+}
+.productos123 { 
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 10px 3.6em 2px 0;
+  li a {
+    text-decoration: none;
+    color: black;
+  }
+  col div img {
+    width: 300px;
+  } 
+}
+/* estilos ubiacion*/
+
+main .mapa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1em;
+}
+.ubiHtml {
+    h1 {
+      margin: 5px;
+    }
+    h4 {
+      margin-left: 10px;
+    }
+ }
+
+
+/*contacto*/
+
+.contactoHtml { 
+  h1 {
+    padding: 1em;
+  }
+  h5 {
+    text-align: center;
+    padding: 3em;
+  }
+  .redesContacto {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 65%;
+    background-color: transparent;
+    width:  100%;
+    overflow: auto;
+    flex-direction: row;
+    margin: 3em;
+}
+
+.redesContacto div {
+    width: 7em;
+    height: 6em;
+    margin: 1em;
+    background-color: lightblue;
+}
+}
+
+
+/* pagina error 404  */
+
+.error404 {
+  margin: 0 0 10px;
+  h1 {
+    font-size: 40px;
+    padding: 10px;
+    font-family: 'Pulse Start 2P', cursiva;
+    text-align: center;
+  }
+  p {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: em;
+    a {
+      text-decoration: none;
+      color: rgb(177, 172, 128);
+    }
+      
+    }
+  }
+  
+  
+
+
+
+@media screen and (min-width: 1024px ) {
+.error404 {
+  h1 {
+    font-size: 4em;
+    font-family: 'Pulse Start 2P', cursiva;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.3em;
+    text-align: center;
+    
+  }
+  p {
+    text-align: center;
+    padding-right: 27em;
+    font-size: 1.5em;
+    margin-bottom: 3em;
+    a {
+      text-decoration: none;
+      color: rgb(177, 172, 128);
+      padding: 4px;
+      border: 3px;
+      border-color: rgb(119, 118, 109);
+      border-style: dotted;
+    }
+  }
+}
+}
+
