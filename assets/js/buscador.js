@@ -5,3 +5,5 @@ search.addEventListener('keyup', function(e) {
     window.open("/assets/html/error404.html");
   }
 });
+
+// funciona para abrir nueva pagina si el usuario presiona enter en el cuadro de texto del buscador, borrar una vez creado la funcion de buscar prouductos.
